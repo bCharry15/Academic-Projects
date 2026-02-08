@@ -1,0 +1,12 @@
+# Maven
+**/target/
+
+# NetBeans
+**/nbproject/private/
+**/build/
+**/dist/
+**/.nb-gradle/
+
+# OS
+.DS_Store
+Thumbs.db

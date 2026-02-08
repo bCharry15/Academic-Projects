@@ -1,2 +1,2 @@
-# projects
+# Projects
 projects of my class

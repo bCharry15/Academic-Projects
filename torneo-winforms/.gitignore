@@ -1,0 +1,11 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+
+# Java / Maven
+target/
+
+# Windows
+Thumbs.db

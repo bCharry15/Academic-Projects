@@ -32,13 +32,19 @@ Implementación académica del patrón de diseño Builder en Java.
 
 [Ver repositorio](ENLACE_DEL_REPOSITORIO)
 
+## Patrones de diseño
+
+### Creational Builder
+
+Implementación académica del patrón de diseño Builder en Java.
+
+[Ver proyecto](./patrones-diseno/builder)
+
 ### Template Method y State
 
-Implementación práctica de los patrones Template Method y State.
+Implementación práctica de los patrones Template Method y State en Java.
 
-[Ver repositorio](ENLACE_DEL_REPOSITORIO)
-
----
+[Ver proyecto](./patrones-diseno/template-method-state)
 
 ## Evolución de Piedra Azul
 

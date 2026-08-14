@@ -46,10 +46,10 @@ Implementación práctica de los patrones Template Method y State en Java.
 
 [Ver proyecto](./patrones-diseno/template-method-state)
 
-## Evolución de Piedra Azul
+## Laboratorio CSS
 
-Las primeras etapas se mantienen archivadas con fines académicos:
+Ver página: https://bcharry15.github.io/Academic-Projects/LaboratorioCSS/Medico.html
 
-- Sprint 1: versión monolítica inicial.
-- Sprint 2: transición hacia microservicios.
-- Sprint 3: solución final con autenticación, contenedores y servicios distribuidos.
+## Laboratorio HTML
+
+Ver página: https://bcharry15.github.io/Academic-Projects/Laboratorio1/

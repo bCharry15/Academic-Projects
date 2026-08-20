@@ -1,55 +1,55 @@
-# Proyectos de Ingeniería de Sistemas
+# Systems Engineering Projects
 
-Este repositorio funciona como índice de los proyectos académicos y personales
-que he desarrollado durante mi formación en Ingeniería de Sistemas.
+This repository serves as an index of the academic and personal projects
+I have developed during my Systems Engineering studies.
 
-## Proyecto destacado
+## Featured Project
 
-### Piedra Azul — Plataforma de agendamiento médico
+### Piedra Azul — Medical Scheduling Platform
 
-Aplicación para la gestión de citas médicas construida con una arquitectura
-orientada a microservicios.
+Medical appointment management application built using a
+microservices-oriented architecture.
 
-**Tecnologías:**
+**Technologies:**
 
 - Java
 - JavaFX
 - Spring Boot
-- Docker Compose
+- Docker
 - Keycloak
 - MariaDB
-- API REST
+- REST API
 
-[Ver repositorio](https://github.com/bCharry15/piedra-azul-medical-platform)
+[View repository](https://github.com/bCharry15/piedra-azul-medical-platform)
 
 ---
 
-## Patrones de diseño
+## Design Patterns
 
-### Creational Builder
+### Builder (Creational)
 
-Implementación académica del patrón de diseño Builder en Java.
+Academic implementation of the Builder design pattern in Java.
 
-[Ver repositorio](ENLACE_DEL_REPOSITORIO)
+[View repository](REPOSITORY_LINK)
 
-## Patrones de diseño
+## Design Patterns
 
-### Creational Builder
+### Builder (Creational)
 
-Implementación académica del patrón de diseño Builder en Java.
+Academic implementation of the Builder design pattern in Java.
 
-[Ver proyecto](./patrones-diseno/builder)
+[View project](./patrones-diseno/builder)
 
-### Template Method y State
+### Template Method and State
 
-Implementación práctica de los patrones Template Method y State en Java.
+Practical implementation of the Template Method and State design patterns in Java.
 
-[Ver proyecto](./patrones-diseno/template-method-state)
+[View project](./patrones-diseno/template-method-state)
 
-## Laboratorio CSS
+## CSS Lab
 
-Ver página: https://bcharry15.github.io/Academic-Projects/LaboratorioCSS/Medico.html
+View page: https://bcharry15.github.io/Academic-Projects/LaboratorioCSS/Medico.html
 
-## Laboratorio HTML
+## HTML Lab
 
-Ver página: https://bcharry15.github.io/Academic-Projects/Laboratorio1/
+View page: https://bcharry15.github.io/Academic-Projects/Laboratorio1/

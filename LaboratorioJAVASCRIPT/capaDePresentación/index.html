@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamiento de citas médicas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <div id="notificaciones" class="notificaciones-contenedor"></div>
+
+  <header class="header-academico">
+    <h1>Sistema de Agendamiento de Citas Médicas</h1>
+    <p>Universidad del Cauca</p>
+    <p>Laboratorio 3 — JavaScript - Manejo del DOM - Arquitectura en Capas</p>
+  </header>
+
+
+  <!-- ===================================================== -->
+  <!-- FORMULARIO MÉDICO -->
+  <!-- ===================================================== -->
+
+  <h2>Registrar Médico</h2>
+
+  <form id="formMedico">
+
+    <label for="nombresMedico">Nombres</label>
+    <input
+      type="text"
+      id="nombresMedico"
+      placeholder="Nombres"
+      required
+    >
+    <label class="error" id="errorNombresMedico"></label>
+
+
+    <label for="apellidosMedico">Apellidos</label>
+    <input
+      type="text"
+      id="apellidosMedico"
+      placeholder="Apellidos"
+      required
+    >
+    <label class="error" id="errorApellidosMedico"></label>
+
+
+    <label for="especialidadMedico">Especialidad</label>
+    <input
+      type="text"
+      id="especialidadMedico"
+      placeholder="Especialidad"
+      required
+    >
+    <label class="error" id="errorEspecialidadMedico"></label>
+
+
+    <label for="anosExperienciaMedico">Años de experiencia</label>
+    <input
+      type="number"
+      id="anosExperienciaMedico"
+      placeholder="Años de experiencia"
+      min="0"
+      step="1"
+      required
+    >
+    <label class="error" id="errorAnosExperienciaMedico"></label>
+
+
+    <label for="horaInicioAtencionMedico">
+      Inicio de atención
+    </label>
+
+    <input
+      type="time"
+      id="horaInicioAtencionMedico"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorHoraInicioAtencionMedico">
+    </label>
+
+
+    <label for="horaFinAtencionMedico">
+      Fin de atención
+    </label>
+
+    <input
+      type="time"
+      id="horaFinAtencionMedico"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorHoraFinAtencionMedico">
+    </label>
+
+
+    <label for="bibliografiaMedico">
+      Bibliografía
+    </label>
+
+    <textarea
+      id="bibliografiaMedico"
+      placeholder="Bibliografía"
+      rows="3"
+      required>
+    </textarea>
+
+    <label
+      class="error"
+      id="errorBibliografiaMedico">
+    </label>
+
+
+    <button
+      type="submit"
+      id="btnAgregarMedico"
+      disabled>
+      Agregar Médico
+    </button>
+
+  </form>
+
+
+  <!-- ===================================================== -->
+  <!-- FORMULARIO PACIENTE -->
+  <!-- ===================================================== -->
+
+  <h2>Registrar Paciente</h2>
+
+  <form id="formPaciente">
+
+    <label for="nombresPaciente">Nombres</label>
+
+    <input
+      type="text"
+      id="nombresPaciente"
+      placeholder="Nombres"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorNombresPaciente">
+    </label>
+
+
+    <label for="apellidosPaciente">
+      Apellidos
+    </label>
+
+    <input
+      type="text"
+      id="apellidosPaciente"
+      placeholder="Apellidos"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorApellidosPaciente">
+    </label>
+
+
+    <button
+      type="submit"
+      id="btnAgregarPaciente"
+      disabled>
+      Agregar Paciente
+    </button>
+
+  </form>
+
+
+  <!-- ===================================================== -->
+  <!-- FORMULARIO CITA -->
+  <!-- ===================================================== -->
+
+  <h2>Registrar cita médica</h2>
+
+  <form id="formCitas">
+
+    <label for="fecha">
+      Fecha
+    </label>
+
+    <input
+      type="date"
+      id="fecha"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorFecha">
+    </label>
+
+
+    <label for="horaInicio">
+      Hora de inicio
+    </label>
+
+    <input
+      type="time"
+      id="horaInicio"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorHoraInicio">
+    </label>
+
+
+    <label for="horaFin">
+      Hora de fin
+    </label>
+
+    <input
+      type="time"
+      id="horaFin"
+      required
+    >
+
+    <label
+      class="error"
+      id="errorHoraFin">
+    </label>
+
+
+    <label for="medicoSelect">
+      Médico
+    </label>
+
+    <select
+      id="medicoSelect"
+      required>
+
+      <option
+        value=""
+        selected
+        disabled>
+        Seleccione un médico
+      </option>
+
+    </select>
+
+    <label
+      class="error"
+      id="errorMedicoSelect">
+    </label>
+
+
+    <label for="pacienteSelect">
+      Paciente
+    </label>
+
+    <select
+      id="pacienteSelect"
+      required>
+
+      <option
+        value=""
+        selected
+        disabled>
+        Seleccione un paciente
+      </option>
+
+    </select>
+
+    <label
+      class="error"
+      id="errorPacienteSelect">
+    </label>
+
+
+    <button
+      type="submit"
+      id="btnAgregarCita"
+      disabled>
+      Agregar Cita
+    </button>
+
+  </form>
+
+
+  <!-- ===================================================== -->
+  <!-- TABLA DE CITAS -->
+  <!-- ===================================================== -->
+
+  <h2>Citas Registradas</h2>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora Inicio</th>
+        <th>Hora Fin</th>
+        <th>Médico</th>
+        <th>Paciente</th>
+      </tr>
+    </thead>
+
+    <tbody id="tablaCitas"></tbody>
+
+  </table>
+
+
+  <footer class="footer-academico">
+
+    <p>
+      Ingeniería del Software III —
+      Ejemplo de arquitectura en capas
+    </p>
+
+    <p>
+      &copy; 2026 Universidad del Cauca.
+      Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+
+  <!-- ===================================================== -->
+  <!-- CAPA DE ACCESO A DATOS -->
+  <!-- ===================================================== -->
+
+  <script src="../capaDeAccesoADatos/entitys/Medico.js"></script>
+  <script src="../capaDeAccesoADatos/entitys/Paciente.js"></script>
+  <script src="../capaDeAccesoADatos/entitys/Cita.js"></script>
+
+  <script src="../capaDeAccesoADatos/repositorios/MedicoRepository.js"></script>
+  <script src="../capaDeAccesoADatos/repositorios/PacienteRepository.js"></script>
+  <script src="../capaDeAccesoADatos/repositorios/CitaRepository.js"></script>
+
+
+  <!-- ===================================================== -->
+  <!-- SERVICIOS -->
+  <!-- ===================================================== -->
+
+  <script src="../fachadaServices/gestionarMedicosServices.js"></script>
+  <script src="../fachadaServices/gestionarPacientesServices.js"></script>
+  <script src="../fachadaServices/gestionarCitasServices.js"></script>
+
+
+  <!-- ===================================================== -->
+  <!-- CAPA DE PRESENTACIÓN -->
+  <!-- ===================================================== -->
+
+  <script src="notificaciones.js"></script>
+
+  <!-- Archivo nuevo con las validaciones -->
+  <script src="validacion.js"></script>
+
+  <script src="logicaMedico.js"></script>
+  <script src="logicaPaciente.js"></script>
+  <script src="logicaCita.js"></script>
+
+</body>
+
+</html>

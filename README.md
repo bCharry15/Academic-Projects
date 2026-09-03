@@ -53,3 +53,7 @@ View page: https://bcharry15.github.io/Academic-Projects/LaboratorioCSS/Medico.h
 ## HTML Lab
 
 View page: https://bcharry15.github.io/Academic-Projects/Laboratorio1/
+
+## Machine Learning
+
+View page: https://github.com/bCharry15/Academic-Projects/tree/main/Machine-learning

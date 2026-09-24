@@ -1,0 +1,256 @@
+<section
+  id="registro"
+  class="seccion-registro"
+>
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <h2 class="titulo-registro">
+        Registro de paciente
+      </h2>
+
+      <p class="subtitulo-registro">
+        Completa tus datos para solicitar atención médica
+      </p>
+
+    </div>
+
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-8 col-md-10">
+
+        <div class="card formulario-card">
+
+          <div class="card-body p-4 p-md-5">
+
+
+            <div class="text-center icono-formulario">
+
+              <i class="fas fa-user-plus"></i>
+
+            </div>
+
+
+            <form novalidate>
+
+
+              <!-- NOMBRE -->
+              <div class="mb-4">
+
+                <label
+                  for="nombre"
+                  class="form-label fw-bold"
+                >
+                  Nombre completo
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+
+                    <i class="fas fa-user"></i>
+
+                  </span>
+
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="form-control"
+                    placeholder="Ej: Juan Pérez"
+                    [(ngModel)]="nombre"
+                    (blur)="validarNombre()"
+                    [class.is-invalid]="errorNombre !== ''"
+                  >
+
+                  <div class="invalid-feedback">
+                    {{ errorNombre }}
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- CORREO -->
+              <div class="mb-4">
+
+                <label
+                  for="correo"
+                  class="form-label fw-bold"
+                >
+                  Correo electrónico
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+
+                    <i class="fas fa-envelope"></i>
+
+                  </span>
+
+                  <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    class="form-control"
+                    placeholder="correo@ejemplo.com"
+                    [(ngModel)]="correo"
+                    (blur)="validarCorreo()"
+                    [class.is-invalid]="errorCorreo !== ''"
+                  >
+
+                  <div class="invalid-feedback">
+                    {{ errorCorreo }}
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- TELÉFONO -->
+              <div class="mb-4">
+
+                <label
+                  for="telefono"
+                  class="form-label fw-bold"
+                >
+                  Teléfono
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+
+                    <i class="fas fa-phone"></i>
+
+                  </span>
+
+                  <input
+                    type="text"
+                    id="telefono"
+                    name="telefono"
+                    class="form-control"
+                    placeholder="Ej: 3001234567"
+                    [(ngModel)]="telefono"
+                    (blur)="validarTelefono()"
+                    [class.is-invalid]="errorTelefono !== ''"
+                  >
+
+                  <div class="invalid-feedback">
+                    {{ errorTelefono }}
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- ESPECIALIDAD -->
+              <div class="mb-4">
+
+                <label
+                  for="especialidad"
+                  class="form-label fw-bold"
+                >
+                  Especialidad
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+
+                    <i class="fas fa-stethoscope"></i>
+
+                  </span>
+
+                  <select
+                    id="especialidad"
+                    name="especialidad"
+                    class="form-select"
+                    [(ngModel)]="especialidad"
+                    (blur)="validarEspecialidad()"
+                    [class.is-invalid]="errorEspecialidad !== ''"
+                  >
+
+                    <option value="">
+                      Seleccione una especialidad
+                    </option>
+
+                    <option value="Cardiología">
+                      Cardiología
+                    </option>
+
+                    <option value="Pediatría">
+                      Pediatría
+                    </option>
+
+                    <option value="Dermatología">
+                      Dermatología
+                    </option>
+
+                    <option value="Neurología">
+                      Neurología
+                    </option>
+
+                  </select>
+
+                  <div class="invalid-feedback">
+                    {{ errorEspecialidad }}
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- BOTÓN -->
+              <div class="d-grid mt-4">
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  (click)="registrar()"
+                >
+
+                  <i class="fas fa-user-check me-2"></i>
+
+                  Registrar
+
+                </button>
+
+              </div>
+
+
+              <!-- MENSAJE CORRECTO -->
+              <div
+                *ngIf="registroExitoso"
+                class="alert alert-success mt-4 text-center"
+                role="alert"
+              >
+
+                <i class="fas fa-circle-check me-2"></i>
+
+                Registro realizado correctamente.
+
+              </div>
+
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

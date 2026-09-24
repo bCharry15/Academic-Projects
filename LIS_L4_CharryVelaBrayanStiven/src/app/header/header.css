@@ -1,0 +1,45 @@
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #6da1d9;
+  color: white;
+}
+
+.profile-info {
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.disciplina {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.descripcion {
+  margin: 5px 0 10px;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #dcdcdc;
+}

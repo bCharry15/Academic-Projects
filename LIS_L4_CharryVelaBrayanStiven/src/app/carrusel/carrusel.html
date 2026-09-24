@@ -1,0 +1,177 @@
+<section id="inicio" class="seccion-carrusel">
+
+  <div
+    id="carruselPrincipal"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+
+      <button
+        type="button"
+        data-bs-target="#carruselPrincipal"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Diapositiva 1"
+      ></button>
+
+      <button
+        type="button"
+        data-bs-target="#carruselPrincipal"
+        data-bs-slide-to="1"
+        aria-label="Diapositiva 2"
+      ></button>
+
+      <button
+        type="button"
+        data-bs-target="#carruselPrincipal"
+        data-bs-slide-to="2"
+        aria-label="Diapositiva 3"
+      ></button>
+
+    </div>
+
+
+    <!-- Diapositivas -->
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+
+        <div class="slide slide-uno">
+
+          <div class="contenido-slide">
+
+            <i class="fas fa-heart-pulse icono-slide"></i>
+
+            <h1>
+              {{ tituloPrincipal }}
+            </h1>
+
+            <p>
+              {{ descripcionPrincipal }}
+            </p>
+
+            <a
+              class="btn btn-light btn-lg mt-3"
+              href="#especialidades"
+            >
+              Ver especialidades
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+
+        <div class="slide slide-dos">
+
+          <div class="contenido-slide">
+
+            <i class="fas fa-user-doctor icono-slide"></i>
+
+            <h1>
+              {{ tituloEspecialistas }}
+            </h1>
+
+            <p>
+              {{ descripcionEspecialistas }}
+            </p>
+
+            <a
+              class="btn btn-light btn-lg mt-3"
+              href="#especialidades"
+            >
+              Conocer médicos
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+
+        <div class="slide slide-tres">
+
+          <div class="contenido-slide">
+
+            <i class="fas fa-calendar-check icono-slide"></i>
+
+            <h1>
+              {{ tituloCitas }}
+            </h1>
+
+            <p>
+              {{ descripcionCitas }}
+            </p>
+
+            <a
+              class="btn btn-light btn-lg mt-3"
+              href="#registro"
+            >
+              Registrarse
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Botón anterior -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carruselPrincipal"
+      data-bs-slide="prev"
+    >
+
+      <span
+        class="carousel-control-prev-icon"
+        aria-hidden="true"
+      ></span>
+
+      <span class="visually-hidden">
+        Anterior
+      </span>
+
+    </button>
+
+
+    <!-- Botón siguiente -->
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carruselPrincipal"
+      data-bs-slide="next"
+    >
+
+      <span
+        class="carousel-control-next-icon"
+        aria-hidden="true"
+      ></span>
+
+      <span class="visually-hidden">
+        Siguiente
+      </span>
+
+    </button>
+
+  </div>
+
+</section>

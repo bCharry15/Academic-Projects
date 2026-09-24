@@ -1,0 +1,31 @@
+.navbar {
+  padding: 12px 25px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: white;
+  margin: 0 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #dceeff;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}

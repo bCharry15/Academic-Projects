@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.contenedor {
+  min-height: 50vh;
+  position: relative;
+}
+
+footer {
+  padding: 15px 0 0 0;
+}

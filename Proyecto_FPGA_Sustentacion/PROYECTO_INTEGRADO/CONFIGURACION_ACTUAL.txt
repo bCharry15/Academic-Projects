@@ -1,0 +1,45 @@
+﻿CONFIGURACION ACTUAL DEL PROYECTO FPGA
+Generada leyendo PROYECTO_INTEGRADO\miROM.mif el 2026-09-28 19:25:33
+
+Los valores de abajo son resultados esperados del modelo de ocho bits.
+Compruebelos ejecutando una simulacion nueva en Quartus desde reset.
+Si edita el MIF manualmente, vuelva al menu 4 para actualizar este informe.
+
+ROM activa (direccion : palabra hexadecimal):
+  0 : 3FA;
+  1 : 000;
+  2 : 200;
+  3 : 200;
+  4 : 200;
+  5 : 200;
+  6 : 200;
+  7 : 200;
+
+Ejecucion desde Reset: ACC = 00 hexadecimal (0 decimal).
+Paso Dir ROM Operacion     A(dec) B(dec) ACC(hex) ACC(dec)
+   1   0 3FA A OR B            0    250       FA      250
+   2   1 000 NOT A           250      -       05        5
+   3   2 200 Transferir A      5      -       05        5
+   4   3 200 Transferir A      5      -       05        5
+   5   4 200 Transferir A      5      -       05        5
+   6   5 200 Transferir A      5      -       05        5
+   7   6 200 Transferir A      5      -       05        5
+   8   7 200 Transferir A      5      -       05        5
+
+ACC hexadecimal: 00 -> FA -> 05 -> 05 -> 05 -> 05 -> 05 -> 05 -> 05
+Se conservan los ocho bits inferiores: 255+1=0; 0-1=255.
+En las ocho operaciones, A es el resultado acumulado del paso anterior.
+En una prueba A/B independiente, el paso 1 carga A, el paso 2 opera y los demas conservan el resultado.
+
+PARA APLICAR LOS CAMBIOS Y SIMULAR:
+1. Si miROM.mif esta abierto en un editor, recarguelo; no guarde una version vieja sobre la nueva.
+2. Abra PROYECTO_INTEGRADO\PROYECTO_TOP.qpf de esta misma carpeta en Quartus.
+3. Ejecute Processing > Start Compilation y espere a que termine sin errores.
+4. Abra PROYECTO_INTEGRADO\SIMULACION_COMPLETA.vwf.
+5. Ejecute Simulation > Run Functional Simulation desde el inicio, con el reset incluido.
+6. Muestre ACC y ROM_OUT en hexadecimal. Observe ACC despues de cada flanco ascendente de PULSO.
+No basta con abrir resultados anteriores: es necesario volver a compilar y simular.
+Si movio el proyecto y el editor conserva una ruta vieja, seleccione el VWF actual en Simulation Settings.
+
+Para volver al programa original, use la opcion 3 del configurador y compile/simule de nuevo.
+Reset reinicia la ejecucion; no restaura la ROM original.

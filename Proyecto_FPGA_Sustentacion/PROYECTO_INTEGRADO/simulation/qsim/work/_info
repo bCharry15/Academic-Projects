@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Brayan\Desktop\Proyecto_FPGA_Sustentacion\PROYECTO_INTEGRADO\simulation\qsim
+vPROYECTO_TOP
+Z1 IA9OhmILHhATP[ek8f0oHf0
+Z2 VzIZMcRh4K;[VdVPLYlEEi1
+Z3 dC:\Users\Brayan\Desktop\Proyecto_FPGA_Sustentacion\PROYECTO_INTEGRADO\simulation\qsim
+Z4 w1790640896
+Z5 8PROYECTO_TOP.vo
+Z6 FPROYECTO_TOP.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|PROYECTO_TOP.vo|
+Z9 o-work work -O0
+Z10 n@p@r@o@y@e@c@t@o_@t@o@p
+!i10b 1
+Z11 !s100 31zP50DC=Kz0:o_G@Ho_F3
+!s85 0
+Z12 !s108 1790640897.509000
+Z13 !s107 PROYECTO_TOP.vo|
+!s101 -O0
+vPROYECTO_TOP_vlg_check_tst
+!i10b 1
+Z14 !s100 BICFRkaeen[5g`=l?z2JN0
+Z15 IXbd6BMmjOG1@KG9OKL1AK0
+Z16 VlH9UhR9_oBBo[dgi[KEVQ3
+R3
+Z17 w1790640894
+Z18 8PROYECTO_TOP.vt
+Z19 FPROYECTO_TOP.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z20 !s108 1790640897.731000
+Z21 !s107 PROYECTO_TOP.vt|
+Z22 !s90 -work|work|PROYECTO_TOP.vt|
+!s101 -O0
+R9
+Z23 n@p@r@o@y@e@c@t@o_@t@o@p_vlg_check_tst
+vPROYECTO_TOP_vlg_sample_tst
+!i10b 1
+Z24 !s100 <HanceUSJYl<<Mdz[k]6E3
+Z25 I72m2[VZEA<`dZT2bghj`a2
+Z26 Vb`Ua[GG3[^dKWQ5l61A432
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@p@r@o@y@e@c@t@o_@t@o@p_vlg_sample_tst
+vPROYECTO_TOP_vlg_vec_tst
+!i10b 1
+Z28 !s100 A7W:z<bo3L_@9UH?R2>PU2
+Z29 I2@4Dl^>lG[33M;0bYF;`P1
+Z30 VUn_dUzCW[<CV6PMPUDic<0
+R3
+R17
+R18
+R19
+Z31 L0 615
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@p@r@o@y@e@c@t@o_@t@o@p_vlg_vec_tst

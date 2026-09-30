@@ -1,0 +1,14 @@
+WIDTH=11;
+DEPTH=8;
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+CONTENT BEGIN
+    0 : 3FA;
+    1 : 000;
+    2 : 200;
+    3 : 200;
+    4 : 200;
+    5 : 200;
+    6 : 200;
+    7 : 200;
+END;

@@ -1,0 +1,30 @@
+VALIDACION DEL PROYECTO CORREGIDO - 28/09/2026
+============================================
+
+Proyecto integrado en Quartus II 13.0 SP1:
+- Analysis & Synthesis: 0 errores.
+- Fitter: 0 errores.
+- Assembler: 0 errores. Se genero output_files/PROYECTO_TOP.sof
+  con el programa original ascendente.
+- Netlist y simulacion funcional Quartus: 0 errores en las dos pruebas.
+
+Programa original restaurado en miROM.mif y respaldo_original/miROM.mif:
+- Direcciones leidas: 0,1,2,3,4,5,6,7.
+- ROM: 000,10F,200,3F0,400,501,601,700.
+- ACC despues de cada PULSO: FF,0F,0F,FF,FE,FF,FE,FF.
+
+Prueba independiente con A=0xFA, operacion 5/SUMA, B=0xB9:
+- ROM temporal: direccion 0=3FA (cargar A); direccion 1=5B9 (sumar B).
+- ACC despues del primer PULSO=FA; despues del segundo=B3.
+- La suma completa es 0x1B3. Cout=1 justo antes de guardar B3.
+- Los displays HEX1/HEX0 mostraron B y 3 correctamente.
+- El MIF activo fue restaurado al programa original despues de esta prueba.
+
+El decodificador BDF se comprobo con todas las entradas 0..F.
+Los registros VCD de ambas simulaciones estan en PROYECTO_INTEGRADO/evidencia.
+El archivo CONFIGURACION_ACTUAL.txt muestra predicciones del configurador;
+los VCD contienen las salidas realmente calculadas por el simulador.
+
+Quedan avisos del proyecto original sobre pines sin ubicacion exacta,
+ausencia de PROYECTO_TOP.sdc y limites de licencia. No se comprobo
+el comportamiento en una FPGA fisica ni el cierre temporal de la placa.

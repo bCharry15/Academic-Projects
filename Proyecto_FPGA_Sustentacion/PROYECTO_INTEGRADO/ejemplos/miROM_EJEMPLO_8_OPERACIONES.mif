@@ -1,0 +1,16 @@
+-- B nuevos: AND=18, OR=32, SUMA=5, RESTA=3 (valores decimales)
+-- Resultados hex tras cada pulso: FF 12 12 32 31 36 33 34
+WIDTH=11;
+DEPTH=8;
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+CONTENT BEGIN
+    0 : 000;
+    1 : 112;
+    2 : 200;
+    3 : 320;
+    4 : 400;
+    5 : 505;
+    6 : 603;
+    7 : 700;
+END;

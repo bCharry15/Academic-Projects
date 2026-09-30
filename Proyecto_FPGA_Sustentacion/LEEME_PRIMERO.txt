@@ -1,0 +1,85 @@
+PROYECTO FPGA - ENTRADAS CONFIGURABLES PARA SUSTENTACION
+=====================================================
+
+Este paquete contiene el proyecto completo y las mejoras ya integradas.
+El programa activo inicialmente conserva las ocho operaciones y los datos
+originales. El contador BDF ahora avanza 0,1,2,3,4,5,6,7.
+El decodificador BDF muestra correctamente 0..F. Se conservan los pines.
+
+INICIO RAPIDO
+------------
+1. Extraer TODO el ZIP en una carpeta. No trabajar dentro del ZIP.
+2. Abrir CONFIGURAR_ENTRADAS.cmd con doble clic.
+3. Elegir una opcion del menu:
+   1 = Cambiar los valores B de AND, OR, SUMA y RESTA manteniendo las 8
+       operaciones. A sigue siendo el resultado de la operacion anterior.
+   2 = Ingresar A, B y una operacion independiente. El programa primero
+       carga A y luego ejecuta la operacion; conserva el resultado al final.
+   3 = Restaurar las ocho instrucciones con sus datos originales.
+   4 = Ver el programa actual y los resultados esperados.
+   0 = Salir.
+4. Abrir PROYECTO_INTEGRADO\PROYECTO_TOP.qpf en Quartus.
+5. Ejecutar Processing > Start Compilation. Esperar que termine sin errores.
+6. Abrir PROYECTO_INTEGRADO\SIMULACION_COMPLETA.vwf.
+7. Ejecutar Simulation > Run Functional Simulation.
+
+DESPUES DE CADA CAMBIO DE ENTRADAS O RESTAURACION
+----------------------------------------------
+Volver a compilar y ejecutar la simulacion. No basta con abrir una grafica
+anterior. Si miROM.mif estaba abierto en Quartus, recargarlo desde disco
+y no guardar sobre el los valores antiguos de una pestana pendiente.
+
+LOS NUMEROS
+-----------
+El menu acepta decimal de 0 a 255. Por ejemplo, escribir 20 significa veinte.
+Para hexadecimal, escribir el prefijo 0x: 0x14 tambien significa veinte.
+El menu hace la conversion a la ROM; no es necesario editar el MIF a mano.
+Los resultados de ACC se consultan en hexadecimal. 0x13 = 19 decimal.
+Las operaciones son de 8 bits: 255+1 da 00 y 0-1 da FF.
+Por ejemplo, A=0xFA y B=0xB9 con SUMA producen 0x1B3: ACC=B3 y Cout=1
+durante la suma. Los displays muestran B3, no el acarreo.
+
+QUE HACE LA OPCION A/B INDEPENDIENTES
+-----------------------------------
+Ejemplo: A=12, B=7, SUMA.
+En el menu: opcion 2, A=12, SUMA (o codigo 5), B=7, ENTER para guardar.
+Primera pulsacion: carga 12 (ACC=0C).
+Segunda pulsacion: ejecuta 12+7 (ACC=13, equivalente a 19 decimal).
+Las siguientes seis instrucciones conservan ese resultado.
+Este modo sustituye temporalmente el programa de ocho operaciones.
+La opcion 3 vuelve al programa original.
+
+PARA VOLVER AL ORIGINAL
+----------------------
+Elegir 3 en CONFIGURAR_ENTRADAS.cmd y volver a compilar/simular.
+Reset reinicia el acumulador; no restaura el contenido anterior de la ROM.
+El respaldo del MIF original esta en:
+PROYECTO_INTEGRADO\respaldo_original\miROM.mif
+No editar ese respaldo.
+
+ARCHIVOS UTILES
+---------------
+GUIA_SUSTENTACION.md: explicacion de los modos y de la simulacion.
+PROYECTO_INTEGRADO\CONFIGURACION_ACTUAL.txt: programa activo y calculo de
+  resultados esperados; se actualiza al usar el menu.
+PROYECTO_INTEGRADO\ejemplos: dos programas de ejemplo opcionales.
+PROYECTO_INTEGRADO\respaldo_original: fuentes y documentos de referencia
+  originales. Algunos README antiguos corresponden a versiones anteriores;
+  para esta entrega usar las instrucciones nuevas de la carpeta principal.
+
+La simulacion integrada ya trae 8 pulsaciones durante 100 us, SIM_MODE=1,
+Reset inicial y CLOCK_50 a 50 MHz. Las salidas se dejaron en X en el archivo
+de estimulos para que se calculen al simular, sin comparaciones contra ceros
+guardados de una simulacion antigua. No editar ACC o ROM_OUT como entradas.
+
+FPGA FISICA
+-----------
+El menu cambia los datos en el computador. Para verlos en la placa hay que
+compilar y programar el nuevo .sof con el Programmer habitual. Usar
+SIM_MODE/SW0=0 en la placa, aplicar reset y avanzar con el boton.
+Para devolver la placa a sus datos originales, restaurar con el menu,
+compilar y programar de nuevo.
+
+Se requiere el Quartus/ModelSim que ya usan para el proyecto. El menu usa
+Windows PowerShell, incluido en Windows; no necesita Python ni instalar
+librerias. No se modifican configuraciones permanentes de PowerShell.

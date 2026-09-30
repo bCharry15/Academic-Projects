@@ -1,0 +1,33 @@
+/* ANTIRREBOTE symbol - generated for Quartus II 13 */
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 160 128)
+	(text "ANTIRREBOTE" (rect 5 0 82 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)(input)
+		(text "BTN" (rect 21 27 43 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)(input)
+		(text "CLOCK_50" (rect 21 43 80 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)(input)
+		(text "RESET" (rect 21 59 57 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)(input)
+		(text "SIM_MODE" (rect 21 75 78 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 144 32)(output)
+		(text "PULSO" (rect 92 27 127 41)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(drawing (rectangle (rect 16 16 128 96)))
+)

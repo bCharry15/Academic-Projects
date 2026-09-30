@@ -1,0 +1,22 @@
+-- Laboratorio Final - Arquitectura Computacional
+-- ROM: 8 palabras x 11 bits
+-- Formato de palabra: [M S1 S0][B7..B0]
+-- El contador del proyecto recorre 0,1,2,3,4,5,6,7.
+-- Cada direccion contiene la operacion con el mismo numero de opcode.
+
+WIDTH=11;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+    0 : 000; -- 000 | B=00 : Complemento de A
+    1 : 10F; -- 001 | B=0F : A AND B        (Ci indiferente)
+    2 : 200; -- 010 | B=00 : Transferencia A(Ci indiferente)
+    3 : 3F0; -- 011 | B=F0 : A OR B         (Ci indiferente)
+    4 : 400; -- 100 | B=00 : Decremento A   (Ci=0)
+    5 : 501; -- 101 | B=01 : Suma A+B       (Ci=0)
+    6 : 601; -- 110 | B=01 : Resta A-B      (Ci=1)
+    7 : 700; -- 111 | B=00 : Incremento de A (Ci=1)
+END;

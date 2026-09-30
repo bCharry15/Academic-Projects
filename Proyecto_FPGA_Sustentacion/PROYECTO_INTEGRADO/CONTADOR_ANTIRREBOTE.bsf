@@ -1,0 +1,11 @@
+(header "symbol" (version "1.2"))
+(symbol
+ (rect 16 16 224 128)
+ (text "CONTADOR_ANTIRREBOTE" (rect 5 0 180 14)(font "Arial" (font_size 8)))
+ (text "inst" (rect 8 96 30 108)(font "Arial" ))
+ (port (pt 0 32)(input)(text "CLOCK_50" (rect 21 27 83 41)(font "Arial" (font_size 8)))(line (pt 0 32)(pt 16 32)))
+ (port (pt 0 48)(input)(text "CLEAR_OK" (rect 21 43 83 57)(font "Arial" (font_size 8)))(line (pt 0 48)(pt 16 48)))
+ (port (pt 208 32)(output)(text "Q7" (rect 166 27 190 41)(font "Arial" (font_size 8)))(line (pt 208 32)(pt 192 32)))
+ (port (pt 208 48)(output)(text "Q20" (rect 160 43 190 57)(font "Arial" (font_size 8)))(line (pt 208 48)(pt 192 48)))
+ (drawing (rectangle (rect 16 16 192 96)))
+)

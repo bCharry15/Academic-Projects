@@ -1,0 +1,59 @@
+<div class="container-fluid p-0">
+
+  <footer
+  id="contacto"
+  class="text-center text-lg-start"
+>
+
+    <div class="container py-3">
+
+      <p class="text-center text-white my-2">
+        {{ proyecto.anio }} -
+        {{ proyecto.nombreProyecto }} |
+        {{ tecnologia.leyenda }}
+        {{ tecnologia.tec1 }} y
+        {{ tecnologia.tec2 }} |
+        {{ autor }}
+      </p>
+
+    </div>
+
+    <div class="container d-flex justify-content-center py-3">
+
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-primary btn-lg btn-floating mx-2"
+        aria-label="Facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-primary btn-lg btn-floating mx-2"
+        aria-label="YouTube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+
+    </div>
+
+    <div class="copyright text-center text-white p-3">
+
+      © {{ proyecto.anio }} Copyright:
+
+      <a
+        class="text-white"
+        href="https://www.unicauca.edu.co/"
+        target="_blank"
+      >
+        Universidad del Cauca
+      </a>
+
+    </div>
+
+  </footer>
+
+</div>

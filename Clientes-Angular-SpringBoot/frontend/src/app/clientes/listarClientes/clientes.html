@@ -1,0 +1,47 @@
+<div class="my-2 text-left">
+  <button
+    class="btn btn-rounded btn-primary"
+    type="button"
+    [routerLink]="['/cliente/crearClientes']"
+  >
+    Crear Cliente
+  </button>
+</div>
+
+<div class="card text-white bg-primary mb-3">
+  <div class="card-header">Clientes</div>
+
+  <div class="card-body">
+    <h5 class="card-title">Listado de clientes</h5>
+
+    @if (clientes().length === 0) {
+      <div class="alert alert-info">
+        No hay registros en la base de datos
+      </div>
+    } @else {
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>nombres</th>
+            <th>apellidos</th>
+            <th>email</th>
+            <th>fecha de creación</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (cliente of clientes(); track cliente.id) {
+            <tr>
+              <td>{{ cliente.id }}</td>
+              <td>{{ cliente.nombre }}</td>
+              <td>{{ cliente.apellido }}</td>
+              <td>{{ cliente.email }}</td>
+              <td>{{ cliente.createAt }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>

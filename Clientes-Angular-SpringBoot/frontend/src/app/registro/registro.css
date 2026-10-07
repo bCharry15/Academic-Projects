@@ -1,0 +1,72 @@
+.seccion-registro {
+  background-color: white;
+}
+
+.titulo-registro {
+  color: #0d6efd;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.subtitulo-registro {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.formulario-card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icono-formulario {
+  color: #0d6efd;
+  font-size: 4rem;
+  margin-bottom: 25px;
+}
+
+.form-label {
+  color: #343a40;
+}
+
+.input-group-text {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+  min-width: 48px;
+  justify-content: center;
+}
+
+.form-control,
+.form-select {
+  min-height: 48px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary {
+  min-height: 50px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.alert {
+  border-radius: 10px;
+}
+
+
+@media (max-width: 576px) {
+
+  .titulo-registro {
+    font-size: 1.8rem;
+  }
+
+  .formulario-card .card-body {
+    padding: 25px !important;
+  }
+
+}

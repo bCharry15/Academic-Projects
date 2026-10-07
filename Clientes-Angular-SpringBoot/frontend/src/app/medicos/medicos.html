@@ -1,0 +1,180 @@
+<section
+  id="especialidades"
+  class="seccion-medicos"
+>
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <h2 class="titulo-seccion">
+        Médicos por especialidad
+      </h2>
+
+      <p class="subtitulo-seccion">
+        Selecciona una especialidad para conocer nuestros profesionales
+      </p>
+
+    </div>
+
+
+    <div class="row">
+
+      <!-- SIDEBAR -->
+      <aside class="col-lg-3 col-md-4 mb-4">
+
+        <div class="sidebar-especialidades">
+
+          <h4 class="mb-3">
+
+            <i class="fas fa-stethoscope me-2"></i>
+
+            Especialidades
+
+          </h4>
+
+
+          <button
+            class="btn especialidad-btn"
+            [class.active]="especialidadSeleccionada === 'Todos'"
+            (click)="cambiarEspecialidad('Todos')"
+          >
+            Todos
+          </button>
+
+
+          <button
+            class="btn especialidad-btn"
+            [class.active]="especialidadSeleccionada === 'Cardiología'"
+            (click)="cambiarEspecialidad('Cardiología')"
+          >
+            Cardiología
+          </button>
+
+
+          <button
+            class="btn especialidad-btn"
+            [class.active]="especialidadSeleccionada === 'Pediatría'"
+            (click)="cambiarEspecialidad('Pediatría')"
+          >
+            Pediatría
+          </button>
+
+
+          <button
+            class="btn especialidad-btn"
+            [class.active]="especialidadSeleccionada === 'Dermatología'"
+            (click)="cambiarEspecialidad('Dermatología')"
+          >
+            Dermatología
+          </button>
+
+
+          <button
+            class="btn especialidad-btn"
+            [class.active]="especialidadSeleccionada === 'Neurología'"
+            (click)="cambiarEspecialidad('Neurología')"
+          >
+            Neurología
+          </button>
+
+        </div>
+
+      </aside>
+
+
+      <!-- CONTENIDO -->
+      <div class="col-lg-9 col-md-8">
+
+
+        <!-- DESCRIPCIÓN DE LA ESPECIALIDAD -->
+        <div class="descripcion-especialidad mb-4">
+
+          <div class="d-flex align-items-start">
+
+            <div class="icono-descripcion me-3">
+
+              <i class="fas fa-circle-info"></i>
+
+            </div>
+
+            <div>
+
+              <h4>
+                {{ especialidadSeleccionada }}
+              </h4>
+
+              <p class="mb-0">
+                {{ descripcionEspecialidad }}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- MÉDICOS -->
+        <div class="row g-4">
+
+          <div
+            class="col-xl-4 col-lg-6 col-md-12"
+            *ngFor="let medico of obtenerMedicosFiltrados()"
+          >
+
+            <div class="medico-imagen">
+
+  <img
+    [src]="medico.imagen"
+    [alt]="medico.nombre"
+    class="foto-medico"
+  >
+
+  <div class="icono-especialidad">
+
+    <i
+      class="fas"
+      [ngClass]="medico.icono"
+    ></i>
+
+  </div>
+
+</div>
+
+
+              <div class="card-body text-center">
+
+                <h4 class="card-title">
+                  {{ medico.nombre }}
+                </h4>
+
+                <h6 class="especialidad">
+                  {{ medico.especialidad }}
+                </h6>
+
+                <p class="experiencia">
+
+                  <i class="fas fa-briefcase-medical me-1"></i>
+
+                  {{ medico.experiencia }}
+
+                </p>
+
+                <p class="card-text">
+                  {{ medico.descripcion }}
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</section>

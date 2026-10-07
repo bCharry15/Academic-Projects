@@ -1,0 +1,37 @@
+footer {
+  background-color: #2211a5d7;
+  color: white;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.btn-floating {
+  background-color: #8c5fd0;
+  border-color: #8c5fd0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-floating:hover {
+  background-color: #7450bd;
+  border-color: #7450bd;
+}
+
+.btn-floating i {
+  font-size: 1.4rem;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyright a {
+  text-decoration: underline;
+}

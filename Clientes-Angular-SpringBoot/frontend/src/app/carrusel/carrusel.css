@@ -1,0 +1,115 @@
+.seccion-carrusel {
+  width: 100%;
+}
+
+.slide {
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 80px;
+}
+
+.slide-uno {
+  background:
+    linear-gradient(
+      135deg,
+      #0d6efd,
+      #4da3ff
+    );
+}
+
+.slide-dos {
+  background:
+    linear-gradient(
+      135deg,
+      #198754,
+      #51c98a
+    );
+}
+
+.slide-tres {
+  background:
+    linear-gradient(
+      135deg,
+      #6f42c1,
+      #a77bea
+    );
+}
+
+.contenido-slide {
+  max-width: 800px;
+}
+
+.icono-slide {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.contenido-slide h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contenido-slide p {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.contenido-slide .btn {
+  font-weight: 600;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  .slide {
+    min-height: 380px;
+    padding: 30px 60px;
+  }
+
+  .contenido-slide h1 {
+    font-size: 2.4rem;
+  }
+
+  .contenido-slide p {
+    font-size: 1.15rem;
+  }
+
+  .icono-slide {
+    font-size: 4rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 576px) {
+
+  .slide {
+    min-height: 340px;
+    padding: 30px 45px;
+  }
+
+  .contenido-slide h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenido-slide p {
+    font-size: 1rem;
+  }
+
+  .icono-slide {
+    font-size: 3.5rem;
+  }
+
+  .contenido-slide .btn {
+    font-size: 0.9rem;
+  }
+}

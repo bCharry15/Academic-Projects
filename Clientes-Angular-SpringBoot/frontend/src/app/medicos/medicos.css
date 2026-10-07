@@ -1,0 +1,471 @@
+/* =========================================
+   SECCIÓN MÉDICOS
+========================================= */
+
+.seccion-medicos {
+  background-color: #f5f8fc;
+  width: 100%;
+}
+
+.titulo-seccion {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   SIDEBAR DE ESPECIALIDADES
+========================================= */
+
+.sidebar-especialidades {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.08);
+
+  height: auto;
+}
+
+.sidebar-especialidades h4 {
+  color: #0d6efd;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.especialidad-btn {
+  width: 100%;
+
+  text-align: left;
+
+  padding: 12px 15px;
+
+  margin-bottom: 8px;
+
+  border-radius: 8px;
+
+  border: none;
+
+  background-color: transparent;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.especialidad-btn:hover {
+  background-color: #e7f1ff;
+  color: #0d6efd;
+
+  transform: translateX(3px);
+}
+
+.especialidad-btn.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN DE ESPECIALIDAD
+========================================= */
+
+.descripcion-especialidad {
+  background-color: white;
+
+  border-left: 5px solid #0d6efd;
+
+  border-radius: 12px;
+
+  padding: 20px 25px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.descripcion-especialidad h4 {
+  color: #0d6efd;
+
+  font-weight: bold;
+
+  margin-bottom: 8px;
+}
+
+.descripcion-especialidad p {
+  color: #495057;
+
+  line-height: 1.6;
+
+  margin-bottom: 0;
+}
+
+.icono-descripcion {
+  color: #0d6efd;
+
+  font-size: 1.8rem;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   TARJETAS DE MÉDICOS
+========================================= */
+
+.medico-card {
+  background-color: white;
+
+  border: none;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  height: 100%;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.medico-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================
+   IMAGEN DEL MÉDICO
+========================================= */
+
+.medico-imagen {
+  width: 100%;
+
+  height: 230px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: #e9ecef;
+
+  border-bottom: 4px solid #0d6efd;
+}
+
+.foto-medico {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  display: block;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.medico-card:hover .foto-medico {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   ICONO SOBRE LA IMAGEN
+========================================= */
+
+.icono-especialidad {
+  position: absolute;
+
+  right: 15px;
+
+  bottom: 15px;
+
+  width: 48px;
+
+  height: 48px;
+
+  background-color: #0d6efd;
+
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 2px solid white;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.icono-especialidad i {
+  font-size: 1.35rem;
+}
+
+
+/* =========================================
+   INFORMACIÓN DEL MÉDICO
+========================================= */
+
+.medico-card .card-body {
+  padding: 22px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.card-title {
+  color: #212529;
+
+  font-size: 1.35rem;
+
+  font-weight: bold;
+
+  margin-bottom: 5px;
+}
+
+.especialidad {
+  color: #0d6efd;
+
+  font-weight: bold;
+
+  margin-bottom: 12px;
+}
+
+.experiencia {
+  color: #6c757d;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #343a40;
+
+  line-height: 1.55;
+
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   TABLETS GRANDES
+   Aproximadamente 992px o menos
+========================================= */
+
+@media (max-width: 992px) {
+
+  .titulo-seccion {
+    font-size: 2.1rem;
+  }
+
+  .sidebar-especialidades {
+    padding: 20px;
+  }
+
+  .sidebar-especialidades h4 {
+    font-size: 1.25rem;
+  }
+
+  .descripcion-especialidad {
+    padding: 20px;
+  }
+
+  .medico-imagen {
+    height: 230px;
+  }
+
+}
+
+
+/* =========================================
+   TABLETS PEQUEÑAS / CELULARES
+   Menos de 768px
+========================================= */
+
+@media (max-width: 767px) {
+
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo-seccion {
+    font-size: 1rem;
+  }
+
+
+  /* Sidebar pasa arriba */
+
+  .sidebar-especialidades {
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    width: 100%;
+  }
+
+  .sidebar-especialidades h4 {
+    text-align: center;
+  }
+
+
+  /* Botones ocupan todo el ancho */
+
+  .especialidad-btn {
+    text-align: center;
+
+    padding: 12px;
+  }
+
+  .especialidad-btn:hover {
+    transform: none;
+  }
+
+
+  /* Descripción */
+
+  .descripcion-especialidad {
+    padding: 18px;
+  }
+
+
+  /* Tarjetas */
+
+  .medico-card {
+    max-width: 100%;
+  }
+
+  .medico-imagen {
+    height: 230px;
+  }
+
+  .medico-card .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   Menos de 576px
+========================================= */
+
+@media (max-width: 576px) {
+
+  .seccion-medicos .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .titulo-seccion {
+    font-size: 1.65rem;
+  }
+
+  .subtitulo-seccion {
+    font-size: 0.95rem;
+  }
+
+
+  /* Sidebar */
+
+  .sidebar-especialidades {
+    padding: 18px;
+  }
+
+
+  /* Descripción */
+
+  .descripcion-especialidad {
+    padding: 16px;
+
+    border-left-width: 4px;
+  }
+
+  .descripcion-especialidad h4 {
+    font-size: 1.25rem;
+  }
+
+  .descripcion-especialidad p {
+    font-size: 0.95rem;
+  }
+
+  .icono-descripcion {
+    font-size: 1.5rem;
+  }
+
+
+  /* Imagen */
+
+  .medico-imagen {
+    height: 220px;
+  }
+
+
+  /* Icono flotante */
+
+  .icono-especialidad {
+    width: 45px;
+
+    height: 45px;
+
+    right: 12px;
+
+    bottom: 12px;
+  }
+
+  .icono-especialidad i {
+    font-size: 1.2rem;
+  }
+
+
+  /* Contenido */
+
+  .medico-card .card-body {
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .experiencia {
+    font-size: 0.85rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+}

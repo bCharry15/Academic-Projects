@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #0369a1;
+}
+
+.tarjeta {
+  margin-top: 24px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #0369a1;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+th {
+  background: #e0f2fe;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.formulario {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.formulario label {
+  display: grid;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.formulario input:not([type='checkbox']) {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.formulario .casilla {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formulario button {
+  justify-self: start;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button.secundario {
+  background: #64748b;
+}
+
+button.peligro {
+  background: #b91c1c;
+}
+
+.formulario select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+}

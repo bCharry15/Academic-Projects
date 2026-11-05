@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <defs>
+    <radialGradient id="fondo" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0" stop-color="#4a0d14"/>
+      <stop offset="1" stop-color="#0a0405"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5e7eb"/>
+      <stop offset="0.5" stop-color="#9ca3af"/>
+      <stop offset="1" stop-color="#4b5563"/>
+    </linearGradient>
+    <radialGradient id="ojo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.3" stop-color="#ff3b3b"/>
+      <stop offset="1" stop-color="#ff0000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#fondo)"/>
+  <!-- líneas de circuito -->
+  <g stroke="#7f1d1d" stroke-width="1.5" fill="none" opacity="0.7">
+    <path d="M0 60 H40 V90 H70"/><path d="M200 70 H160 V100 H135"/>
+    <path d="M0 250 H50 V220"/><path d="M200 240 H150 V215"/>
+  </g>
+  <!-- cráneo robótico -->
+  <path d="M100 70 C62 70 48 100 50 135 C51 155 58 168 64 176 L66 205 C66 214 74 220 82 220 H118 C126 220 134 214 134 205 L136 176 C142 168 149 155 150 135 C152 100 138 70 100 70 Z" fill="url(#metal)"/>
+  <!-- placas -->
+  <path d="M100 72 V118" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M60 120 H140" stroke="#6b7280" stroke-width="1" opacity="0.6"/>
+  <!-- cuencas -->
+  <path d="M62 132 Q78 120 94 132 Q92 150 78 150 Q64 150 62 132 Z" fill="#111827"/>
+  <path d="M106 132 Q122 120 138 132 Q136 150 122 150 Q108 150 106 132 Z" fill="#111827"/>
+  <!-- ojos -->
+  <circle cx="78" cy="138" r="16" fill="url(#ojo)"/>
+  <circle cx="122" cy="138" r="16" fill="url(#ojo)"/>
+  <circle cx="78" cy="138" r="4" fill="#ff4d4d"/>
+  <circle cx="122" cy="138" r="4" fill="#ff4d4d"/>
+  <!-- nariz -->
+  <path d="M95 158 L100 172 L105 158 Z" fill="#1f2937"/>
+  <!-- dientes -->
+  <rect x="74" y="185" width="52" height="20" rx="3" fill="#1f2937"/>
+  <g fill="#d1d5db">
+    <rect x="77" y="187" width="5" height="16"/><rect x="84" y="187" width="5" height="16"/>
+    <rect x="91" y="187" width="5" height="16"/><rect x="98" y="187" width="5" height="16"/>
+    <rect x="105" y="187" width="5" height="16"/><rect x="112" y="187" width="5" height="16"/>
+    <rect x="119" y="187" width="5" height="16"/>
+  </g>
+  <rect x="74" y="194" width="52" height="2" fill="#1f2937"/>
+  <!-- cuello -->
+  <g fill="#6b7280">
+    <rect x="80" y="222" width="8" height="30"/><rect x="96" y="222" width="8" height="34"/>
+    <rect x="112" y="222" width="8" height="30"/>
+  </g>
+</svg>

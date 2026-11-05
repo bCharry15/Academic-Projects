@@ -1,0 +1,15 @@
+<button
+  type="button"
+  class="silla"
+  [style.--color-silla]="color()"
+  [class.silla--seleccionada]="estado() === 'seleccionada'"
+  [class.silla--ocupada]="estado() === 'ocupada'"
+  [class.silla--preferencial]="silla().tipo === 'preferencial'"
+  [attr.aria-pressed]="estado() === 'seleccionada'"
+  [attr.aria-disabled]="estado() === 'ocupada'"
+  [attr.aria-label]="etiqueta()"
+  [title]="etiqueta()"
+  (click)="notificar()"
+>
+  <span class="silla__numero">{{ silla().numero }}</span>
+</button>

@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hueco-silla);
+}
+
+.fila__sillas {
+  display: flex;
+  gap: var(--hueco-silla);
+}
+
+.fila__pasillo {
+  width: calc(var(--tam-silla) * 0.6);
+}
+
+.fila__letra {
+  width: 1.1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--texto-tenue);
+}

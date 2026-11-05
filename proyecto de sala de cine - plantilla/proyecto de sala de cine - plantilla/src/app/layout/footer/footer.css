@@ -1,0 +1,125 @@
+:host {
+  --texto-footer: #e0e7ff;
+  --tenue-footer: rgb(224 231 255 / 0.7);
+  --borde-footer: rgb(255 255 255 / 0.15);
+
+  display: block;
+  background: linear-gradient(160deg, #312e81 0%, #1e1b4b 100%);
+  color: var(--texto-footer);
+  font-size: 0.85rem;
+}
+
+.footer__contenido {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr 1fr;
+  gap: 2rem;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 2rem 16px 1.5rem;
+}
+
+.footer__bloque h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+
+.footer__marca {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.footer__eslogan {
+  margin: 0;
+  color: var(--tenue-footer);
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-style: normal;
+  color: var(--tenue-footer);
+}
+
+.footer__sangria {
+  padding-left: 1.4rem;
+}
+
+.footer__redes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__redes a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--texto-footer);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__redes a:hover {
+  color: #fff;
+}
+
+.footer__redes a:hover .footer__icono {
+  background: #fbbf24;
+  color: #1e1b4b;
+}
+
+.footer__redes a:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.footer__redes strong {
+  font-weight: 600;
+}
+
+.footer__redes small {
+  margin-left: 0.35rem;
+  color: var(--tenue-footer);
+}
+
+.footer__icono {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.12);
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 1rem 16px 1.25rem;
+  border-top: 1px solid var(--borde-footer);
+  font-size: 0.75rem;
+  color: var(--tenue-footer);
+}
+
+@media (max-width: 800px) {
+  .footer__contenido {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

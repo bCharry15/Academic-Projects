@@ -1,0 +1,39 @@
+<div class="footer__contenido">
+  <section class="footer__bloque">
+    <h2 class="footer__marca"><span aria-hidden="true">🎬</span> {{ cine.nombre }}</h2>
+    <p class="footer__eslogan">{{ cine.eslogan }}</p>
+  </section>
+
+  <section class="footer__bloque">
+    <h3>Ubicación y contacto</h3>
+    <address>
+      <span>📍 {{ cine.direccion }}</span>
+      <span class="footer__sangria">{{ cine.ciudad }}</span>
+      <span>📞 {{ cine.telefono }}</span>
+      <span>✉️ {{ cine.correo }}</span>
+      <span>🕒 {{ cine.horario }}</span>
+    </address>
+  </section>
+
+  <section class="footer__bloque">
+    <h3>Síguenos</h3>
+    <ul class="footer__redes">
+      @for (red of cine.redes; track red.nombre) {
+        <li>
+          <a href="#" [attr.aria-label]="red.nombre + ' ' + red.usuario" (click)="$event.preventDefault()">
+            <span class="footer__icono" aria-hidden="true">{{ red.icono }}</span>
+            <span>
+              <strong>{{ red.nombre }}</strong>
+              <small>{{ red.usuario }}</small>
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+</div>
+
+<div class="footer__legal">
+  <span>© {{ anio }} {{ cine.nombre }} · Datos ficticios para fines académicos</span>
+  <span>Angular 22 · Signals · Arquitectura Flux · Sin backend</span>
+</div>

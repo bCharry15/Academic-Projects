@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1a3a"/>
+      <stop offset="0.6" stop-color="#1e4a7a"/>
+      <stop offset="1" stop-color="#5b8fc0"/>
+    </linearGradient>
+    <linearGradient id="mar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123a5f"/>
+      <stop offset="1" stop-color="#06162b"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="300" fill="url(#cielo)"/>
+  <!-- estrellas -->
+  <g fill="#fff" opacity="0.8">
+    <circle cx="20" cy="30" r="1"/><circle cx="60" cy="18" r="1.2"/><circle cx="110" cy="40" r="0.8"/>
+    <circle cx="170" cy="25" r="1"/><circle cx="35" cy="75" r="0.8"/><circle cx="90" cy="70" r="1"/>
+  </g>
+  <!-- luna -->
+  <circle cx="150" cy="70" r="22" fill="#f5efd6"/>
+  <circle cx="158" cy="64" r="20" fill="#1a3f6e" opacity="0.35"/>
+  <!-- iceberg -->
+  <path d="M10 205 L28 160 L40 175 L52 150 L70 205 Z" fill="#dbeafe"/>
+  <path d="M28 160 L40 175 L35 205 L22 205 Z" fill="#93c5fd" opacity="0.7"/>
+  <!-- barco -->
+  <g>
+    <rect x="96" y="160" width="10" height="26" fill="#1f2937"/>
+    <rect x="96" y="160" width="10" height="7" fill="#c2410c"/>
+    <rect x="114" y="158" width="10" height="28" fill="#1f2937"/>
+    <rect x="114" y="158" width="10" height="7" fill="#c2410c"/>
+    <rect x="132" y="160" width="10" height="26" fill="#1f2937"/>
+    <rect x="132" y="160" width="10" height="7" fill="#c2410c"/>
+    <rect x="150" y="162" width="10" height="24" fill="#1f2937"/>
+    <rect x="150" y="162" width="10" height="7" fill="#c2410c"/>
+    <path d="M80 186 H190 L180 205 H90 Z" fill="#111827"/>
+    <rect x="86" y="182" width="100" height="5" fill="#f3f4f6"/>
+    <g fill="#fde68a">
+      <rect x="95" y="192" width="3" height="2"/><rect x="105" y="192" width="3" height="2"/>
+      <rect x="115" y="192" width="3" height="2"/><rect x="125" y="192" width="3" height="2"/>
+      <rect x="135" y="192" width="3" height="2"/><rect x="145" y="192" width="3" height="2"/>
+      <rect x="155" y="192" width="3" height="2"/><rect x="165" y="192" width="3" height="2"/>
+    </g>
+  </g>
+  <!-- mar -->
+  <rect y="203" width="200" height="97" fill="url(#mar)"/>
+  <g stroke="#7fb3e0" stroke-width="1.2" opacity="0.45" fill="none">
+    <path d="M10 222 q10 -4 20 0 t20 0"/><path d="M120 230 q10 -4 20 0 t20 0"/>
+    <path d="M60 250 q10 -4 20 0 t20 0"/><path d="M140 268 q10 -4 20 0 t20 0"/>
+  </g>
+  <!-- reflejo de la luna -->
+  <rect x="140" y="210" width="20" height="2" fill="#f5efd6" opacity="0.4"/>
+  <rect x="144" y="218" width="12" height="2" fill="#f5efd6" opacity="0.3"/>
+</svg>

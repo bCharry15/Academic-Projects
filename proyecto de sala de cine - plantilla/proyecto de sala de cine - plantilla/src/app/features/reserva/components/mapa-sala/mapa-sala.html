@@ -1,0 +1,15 @@
+<div class="mapa__pantalla" aria-hidden="true">
+  <span>Pantalla</span>
+</div>
+
+<div class="mapa__scroll">
+  <div class="mapa__filas" [class.mapa__filas--bloqueado]="bloqueado()">
+    @for (fila of filas(); track fila.letra) {
+      <app-fila-sala [fila]="fila" (sillaAlternada)="sillaAlternada.emit($event)" />
+    }
+  </div>
+</div>
+
+@if (nombreSala()) {
+  <p class="mapa__sala">{{ nombreSala() }}</p>
+}

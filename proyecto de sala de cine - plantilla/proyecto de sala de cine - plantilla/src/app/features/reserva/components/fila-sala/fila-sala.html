@@ -1,0 +1,25 @@
+<span class="fila__letra" aria-hidden="true">
+  {{ fila().letra }}
+</span>
+
+<div
+  class="fila__sillas"
+  role="group"
+  [attr.aria-label]="'Fila ' + fila().letra"
+>
+  @for (item of fila().sillas; track item.silla.id) {
+    @if (item.silla.numero === pasilloDespuesDe + 1) {
+      <span class="fila__pasillo" aria-hidden="true"></span>
+    }
+
+    <app-silla
+      [silla]="item.silla"
+      [estado]="item.estado"
+      (alternar)="sillaAlternada.emit($event)"
+    />
+  }
+</div>
+
+<span class="fila__letra" aria-hidden="true">
+  {{ fila().letra }}
+</span>

@@ -1,0 +1,91 @@
+:host {
+  display: block;
+}
+
+.cartelera__titulo {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.cartelera__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.tarjeta {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  background: var(--superficie);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    background-color 0.2s ease;
+}
+
+.tarjeta:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--tono) 60%, transparent);
+}
+
+.tarjeta:focus-visible {
+  outline: 2px solid var(--tono);
+  outline-offset: 2px;
+}
+
+.tarjeta--activa {
+  border-color: var(--tono);
+  background: color-mix(in srgb, var(--tono) 14%, var(--superficie));
+}
+
+.tarjeta:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tarjeta__poster {
+  flex: none;
+  display: block;
+  width: 64px;
+  height: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--superficie-alta);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+}
+
+.tarjeta__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.tarjeta__nombre {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.tarjeta__meta {
+  font-size: 0.75rem;
+  color: var(--texto-tenue);
+}
+
+.tarjeta__horario {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--tono);
+}

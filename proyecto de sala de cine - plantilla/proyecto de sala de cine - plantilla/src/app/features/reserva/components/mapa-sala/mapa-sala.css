@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.mapa__pantalla {
+  position: relative;
+  height: 46px;
+  margin: 0 auto 2rem;
+  max-width: 520px;
+  border-top: 4px solid var(--acento);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: linear-gradient(to bottom, rgb(225 29 72 / 0.08), transparent);
+  text-align: center;
+}
+
+.mapa__pantalla span {
+  position: relative;
+  top: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+}
+
+.mapa__scroll {
+  overflow-x: auto;
+  padding: 4px 0 8px;
+}
+
+.mapa__filas {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--hueco-silla) + 4px);
+  width: max-content;
+  margin: 0 auto;
+  transition: opacity 0.2s ease;
+}
+
+.mapa__filas--bloqueado {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.mapa__sala {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--texto-tenue);
+}

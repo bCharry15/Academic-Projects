@@ -1,0 +1,35 @@
+<app-cartelera
+  [peliculas]="store.peliculas"
+  [activaId]="store.peliculaActiva().id"
+  [bloqueada]="store.procesando()"
+  (seleccionar)="seleccionarPelicula($event)"
+/>
+
+@if (store.notificacion(); as aviso) {
+  <app-aviso [notificacion]="aviso" (cerrar)="descartarNotificacion()" />
+}
+
+<div class="reserva__grid">
+  <section class="panel reserva__mapa" aria-label="Mapa de la sala">
+    <app-mapa-sala
+      [filas]="store.filas()"
+      [nombreSala]="store.peliculaActiva().sala + ' · ' + store.peliculaActiva().titulo"
+      [bloqueado]="store.procesando()"
+      (sillaAlternada)="alternarSilla($event)"
+    />
+    <app-leyenda />
+  </section>
+
+  <aside class="panel reserva__resumen" aria-label="Resumen de compra">
+    <app-resumen-compra
+      [pelicula]="store.peliculaActiva()"
+      [sillas]="store.sillasSeleccionadas()"
+      [total]="store.total()"
+      [maximo]="store.maxPorCompra()"
+      [disponibles]="store.cantidadDisponibles()"
+      [estadoCompra]="store.estadoCompra()"
+      (confirmar)="confirmarCompra()"
+      (quitarSilla)="alternarSilla($event)"
+    />
+  </aside>
+</div>

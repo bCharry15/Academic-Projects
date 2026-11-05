@@ -1,0 +1,120 @@
+:host {
+  /* Tokens locales para texto claro sobre fondo de color */
+  --texto: #ffffff;
+  --texto-tenue: rgb(255 255 255 / 0.78);
+  --borde: rgb(255 255 255 / 0.28);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: block;
+  background: linear-gradient(100deg, #be123c 0%, #9f1239 55%, #7e1d4f 100%);
+  color: var(--texto);
+  box-shadow: 0 4px 16px rgb(159 18 57 / 0.25);
+}
+
+.header__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0.85rem 16px 0.6rem;
+}
+
+.header__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header__marca span:last-child {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.header__marca strong {
+  font-size: 1.1rem;
+}
+
+.header__marca small {
+  font-size: 0.7rem;
+  color: var(--texto-tenue);
+}
+
+.header__logo {
+  font-size: 1.5rem;
+}
+
+.header__funcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--borde);
+  border-radius: 99px;
+  background: rgb(255 255 255 / 0.12);
+  font-size: 0.85rem;
+}
+
+.header__punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tono);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.header__pelicula {
+  font-weight: 700;
+}
+
+.header__horario {
+  color: var(--texto-tenue);
+}
+
+.header__carrito {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.header__badge {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 99px;
+  background: var(--silla-seleccionada);
+  color: #1a1306;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.header__total {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.header__frase {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 16px 0.7rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--texto-tenue);
+}
+
+@media (max-width: 640px) {
+  .header__funcion {
+    display: none;
+  }
+
+  .header__frase {
+    font-size: 0.75rem;
+  }
+}

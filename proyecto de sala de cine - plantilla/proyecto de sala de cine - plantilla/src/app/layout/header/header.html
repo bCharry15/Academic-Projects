@@ -1,0 +1,28 @@
+<div class="header__contenido">
+  <div class="header__marca">
+    <span class="header__logo" aria-hidden="true">🎬</span>
+    <span>
+      <strong>CineSala</strong>
+      <small>Reserva de sillas</small>
+    </span>
+  </div>
+
+  <div class="header__funcion" [style.--tono]="store.peliculaActiva().tono">
+    <span class="header__punto" aria-hidden="true"></span>
+    <span class="header__pelicula">{{ store.peliculaActiva().titulo }}</span>
+    <span class="header__horario">{{ store.peliculaActiva().horario }}</span>
+  </div>
+
+  <div class="header__carrito" aria-live="polite">
+    <span class="header__badge">{{ store.cantidadSeleccionadas() }}</span>
+    <span class="header__total">
+      {{ store.total() | currency: 'COP' : 'symbol-narrow' : '1.0-0' }}
+    </span>
+  </div>
+</div>
+
+<p class="header__frase">
+  <span aria-hidden="true">✨</span>
+  {{ frase }}
+  <span aria-hidden="true">✨</span>
+</p>

@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.reserva__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.panel {
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  background: var(--superficie);
+}
+
+.reserva__mapa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reserva__resumen {
+  position: sticky;
+  top: 88px;
+}
+
+@media (max-width: 900px) {
+  .reserva__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reserva__resumen {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,54 @@
+<h2 class="resumen__titulo">Resumen de compra</h2>
+
+<div class="resumen__pelicula" [style.--tono]="pelicula().tono">
+  <strong>{{ pelicula().titulo }}</strong>
+  <span>{{ pelicula().sala }} · {{ pelicula().horario }}</span>
+</div>
+
+<div class="resumen__contador">
+  <span>
+    <strong>{{ sillas().length }}</strong> de {{ maximo() }} sillas
+  </span>
+  <span class="resumen__disponibles">{{ disponibles() }} libres</span>
+</div>
+
+@if (sillas().length > 0) {
+  <ul class="resumen__lista">
+    @for (s of sillas(); track s.id) {
+      <li>
+        <span class="chip" [class.chip--preferencial]="s.tipo === 'preferencial'">{{ s.id }}</span>
+        <span class="resumen__tipo">{{ s.tipo }}</span>
+        <span class="resumen__precio">{{ s.precio | currency: 'COP' : 'symbol-narrow' : '1.0-0' }}</span>
+        <button
+          type="button"
+          class="resumen__quitar"
+          [disabled]="procesando()"
+          [attr.aria-label]="'Quitar silla ' + s.id"
+          (click)="quitarSilla.emit(s.id)"
+        >
+          ✕
+        </button>
+      </li>
+    }
+  </ul>
+} @else {
+  <p class="resumen__vacio">Toca una silla libre en el mapa para agregarla.</p>
+}
+
+<div class="resumen__total">
+  <span>Total</span>
+  <strong>{{ total() | currency: 'COP' : 'symbol-narrow' : '1.0-0' }}</strong>
+</div>
+
+<button
+  type="button"
+  class="resumen__comprar"
+  [disabled]="!puedeComprar()"
+  (click)="confirmar.emit()"
+>
+  @if (procesando()) {
+    <span class="spinner" aria-hidden="true"></span> Procesando…
+  } @else {
+    Confirmar compra
+  }
+</button>

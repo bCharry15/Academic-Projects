@@ -1,0 +1,33 @@
+<h2 class="cartelera__titulo">Cartelera de hoy</h2>
+
+<div class="cartelera__lista" role="radiogroup" aria-label="Películas disponibles">
+  @for (p of peliculas(); track p.id) {
+    <button
+      type="button"
+      role="radio"
+      class="tarjeta"
+      [class.tarjeta--activa]="p.id === activaId()"
+      [style.--tono]="p.tono"
+      [attr.aria-checked]="p.id === activaId()"
+      [disabled]="bloqueada()"
+      (click)="seleccionar.emit(p.id)"
+    >
+      <img
+        class="tarjeta__poster"
+        [src]="p.imagen"
+        [alt]="'Póster de ' + p.titulo"
+        width="64"
+        height="96"
+        loading="lazy"
+      />
+      <span class="tarjeta__info">
+        <span class="tarjeta__nombre">{{ p.titulo }}</span>
+        <span class="tarjeta__meta">{{ p.genero }}</span>
+        <span class="tarjeta__meta">
+          {{ p.anio }} · {{ p.duracionMin }} min · {{ p.clasificacion }}
+        </span>
+        <span class="tarjeta__horario">{{ p.sala }} · {{ p.horario }}</span>
+      </span>
+    </button>
+  }
+</div>

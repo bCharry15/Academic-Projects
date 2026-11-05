@@ -1,0 +1,43 @@
+:root {
+  --fuente: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fondo: #f4f5f8;
+  --superficie: #ffffff;
+  --superficie-alta: #eef0f4;
+  --borde: #dfe3ea;
+  --texto: #1c2130;
+  --texto-tenue: #667085;
+  --acento: #e11d48;
+  --acento-preferencial: #9333ea;
+
+  --silla-libre: #cfd6e3;
+  --silla-seleccionada: #fbbf24;
+  --silla-ocupada: #e8a4ae;
+  --texto-silla: #3b4560;
+
+  --tam-silla: clamp(22px, 6.2vw, 34px);
+  --hueco-silla: clamp(3px, 1vw, 7px);
+  --ancho-max: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}

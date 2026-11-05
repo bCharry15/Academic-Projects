@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+.silla {
+  position: relative;
+  width: var(--tam-silla);
+  height: var(--tam-silla);
+  padding: 0;
+  border: none;
+  border-radius: 8px 8px 4px 4px;
+  background: var(--color-silla);
+  color: var(--texto-silla);
+  font: 600 0.65rem/1 var(--fuente);
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: inset 0 -4px 0 rgb(0 0 0 / 0.12);
+}
+
+/* Respaldo de la silla */
+.silla::after {
+  content: '';
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -3px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--color-silla);
+  filter: brightness(0.7);
+}
+
+.silla--preferencial {
+  outline: 1.5px solid var(--acento-preferencial);
+  outline-offset: 1px;
+}
+
+.silla:hover:not(.silla--ocupada) {
+  transform: translateY(-2px);
+}
+
+.silla:focus-visible {
+  outline: 2px solid var(--texto);
+  outline-offset: 2px;
+}
+
+.silla--seleccionada {
+  color: #1a1306;
+  box-shadow:
+    inset 0 -4px 0 rgb(0 0 0 / 0.2),
+    0 0 12px rgb(251 191 36 / 0.55);
+}
+
+.silla--ocupada {
+  cursor: not-allowed;
+  color: transparent;
+}
+
+.silla--ocupada .silla__numero::before {
+  content: '✕';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #9f1239;
+  font-size: 0.75rem;
+}
